@@ -23,8 +23,8 @@
   --gradient-text: linear-gradient(135deg, #60a5fa 0%, #818cf8 50%, #34d399 100%);
   --gradient-text-alt: linear-gradient(135deg, #34d399 0%, #60a5fa 50%, #818cf8 100%);
 
-  --glass-bg: rgba(30, 41, 59, 0.65);
-  --glass-border: rgba(148, 163, 184, 0.2);
+  --glass-bg: rgba(30, 41, 59, 0.85);
+  --glass-border: rgba(148, 163, 184, 0.3);
   --glass-border-hover: rgba(96, 165, 250, 0.4);
 
   --glow-cyan: 0 0 40px rgba(96, 165, 250, 0.25);
@@ -71,7 +71,7 @@ body {
   height: auto;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  opacity: 0.45;
+  opacity: 0.65;
 }
 
 .page-video-overlay {
@@ -82,9 +82,9 @@ body {
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(15, 23, 42, 0.45) 0%,
-    rgba(15, 23, 42, 0.65) 50%,
-    rgba(15, 23, 42, 0.9) 100%
+    rgba(15, 23, 42, 0.3) 0%,
+    rgba(15, 23, 42, 0.5) 50%,
+    rgba(15, 23, 42, 0.8) 100%
   );
 }
 
@@ -915,6 +915,7 @@ body {
   padding: 40px 32px;
   text-align: center;
   transition: all 0.4s ease;
+  position: relative;
 }
 
 .pricing-card.featured {
@@ -929,7 +930,7 @@ body {
 
 .featured-badge {
   position: absolute;
-  top: -12px;
+  top: -10px;
   left: 50%;
   transform: translateX(-50%);
   background: var(--gradient-primary);
@@ -940,6 +941,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  z-index: 10;
 }
 
 .pricing-label {
