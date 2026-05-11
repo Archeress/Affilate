@@ -5,9 +5,9 @@
    ============================================ */
 
 :root {
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --bg-elevated: #334155;
+  --bg-primary: #1e293b;
+  --bg-secondary: #334155;
+  --bg-elevated: #475569;
 
   --text-primary: #f1f5f9;
   --text-secondary: #cbd5e1;
@@ -23,9 +23,9 @@
   --gradient-text: linear-gradient(135deg, #60a5fa 0%, #818cf8 50%, #34d399 100%);
   --gradient-text-alt: linear-gradient(135deg, #34d399 0%, #60a5fa 50%, #818cf8 100%);
 
-  --glass-bg: rgba(30, 41, 59, 0.85);
-  --glass-border: rgba(148, 163, 184, 0.3);
-  --glass-border-hover: rgba(96, 165, 250, 0.4);
+  --glass-bg: rgba(15, 23, 42, 0.92);
+  --glass-border: rgba(148, 163, 184, 0.45);
+  --glass-border-hover: rgba(96, 165, 250, 0.6);
 
   --glow-cyan: 0 0 40px rgba(96, 165, 250, 0.25);
   --glow-purple: 0 0 40px rgba(129, 140, 248, 0.25);
@@ -82,9 +82,9 @@ body {
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(15, 23, 42, 0.3) 0%,
-    rgba(15, 23, 42, 0.5) 50%,
-    rgba(15, 23, 42, 0.8) 100%
+    rgba(30, 41, 59, 0.2) 0%,
+    rgba(30, 41, 59, 0.35) 50%,
+    rgba(30, 41, 59, 0.65) 100%
   );
 }
 
@@ -104,12 +104,12 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 20px 0;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+  border-bottom: 2px solid rgba(148, 163, 184, 0.35);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(15, 23, 42, 0.25);
+  background: rgba(15, 23, 42, 0.92);
   backdrop-filter: blur(16px) saturate(1.2);
   -webkit-backdrop-filter: blur(16px) saturate(1.2);
   z-index: 100;
@@ -122,9 +122,9 @@ body {
 }
 
 .site-header.scrolled {
-  background: rgba(15, 23, 42, 0.55);
-  border-bottom: 1px solid rgba(96, 165, 250, 0.15);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom: 2px solid rgba(96, 165, 250, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .brand {
@@ -253,16 +253,23 @@ body {
 .glass-panel {
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
+  border: 2px solid var(--glass-border);
   border-radius: 20px;
   position: relative;
   overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.glass-panel:hover {
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 8px 40px rgba(96, 165, 250, 0.15);
+  transform: translateY(-4px);
 }
 
 .glass-card {
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
+  border: 2px solid var(--glass-border);
   border-radius: 16px;
   position: relative;
   overflow: hidden;
@@ -458,6 +465,15 @@ body {
   overflow: hidden;
   position: relative;
   width: 100%;
+  border: 3px solid rgba(148, 163, 184, 0.5);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+}
+
+.hero-image:hover {
+  border-color: rgba(96, 165, 250, 0.8);
+  box-shadow: 0 8px 40px rgba(96, 165, 250, 0.25);
+  transform: translateY(-4px);
 }
 
 .hero-image img {
@@ -668,7 +684,15 @@ body {
   border-radius: 20px;
   overflow: hidden;
   background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
+  border: 3px solid var(--glass-border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+}
+
+.demo-panel:hover {
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 8px 40px rgba(96, 165, 250, 0.2);
+  transform: translateY(-4px);
 }
 
 .demo-panel img {
@@ -916,6 +940,15 @@ body {
   text-align: center;
   transition: all 0.4s ease;
   position: relative;
+  border: 2px solid var(--glass-border);
+  border-radius: 20px;
+  background: var(--glass-bg);
+}
+
+.pricing-card:hover {
+  border-color: var(--glass-border-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 40px rgba(96, 165, 250, 0.15);
 }
 
 .pricing-card.featured {
@@ -926,6 +959,7 @@ body {
 
 .pricing-card.featured:hover {
   transform: scale(1.05) translateY(-4px);
+  box-shadow: 0 8px 40px rgba(96, 165, 250, 0.25);
 }
 
 .featured-badge {
@@ -1007,7 +1041,7 @@ body {
 .faq-list details {
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
+  border: 2px solid var(--glass-border);
   border-radius: 16px;
   padding: 0;
   transition: all 0.4s ease;
@@ -1015,6 +1049,8 @@ body {
 
 .faq-list details:hover {
   border-color: var(--glass-border-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 40px rgba(96, 165, 250, 0.15);
 }
 
 .faq-list summary {
